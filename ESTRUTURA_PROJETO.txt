@@ -1,0 +1,230 @@
+================================================================================
+📁 ESTRUTURA COMPLETA DO PROJETO ECO ECHO v3.2
+================================================================================
+
+eco-echo/
+│
+├── 📄 README.md                           # Documentação principal (29KB)
+├── 📄 QUICKSTART.md                       # Guia rápido de 5 minutos
+├── 📄 CHANGELOG.md                        # Histórico de versões
+├── 📄 LICENSE                             # Licença MIT
+├── 📄 BADGES.md                           # Guia de badges para GitHub
+├── 📄 requirements.txt                    # Dependências Python
+├── 📄 .gitignore                          # Arquivos a ignorar no Git
+│
+├── 📂 src/                                # Código fonte
+│   ├── ECO Echo2.py                       # Script principal (50KB)
+│   └── ECO Echo - envio_de_email.py       # Script de envio (15KB)
+│
+├── 📂 planilhas_para_analise/             # INPUT: Planilhas Excel
+│   ├── 05.02.2026/                        # Pasta por data (DD.MM.YYYY)
+│   │   ├── gestao_requerimentos_andrey.xlsm
+│   │   ├── gestao_requerimentos_maria.xlsm
+│   │   ├── gestao_requerimentos_joao.xlsm
+│   │   └── ...
+│   ├── 06.02.2026/
+│   │   ├── gestao_requerimentos_andrey.xlsm
+│   │   ├── gestao_requerimentos_maria.xlsm
+│   │   └── ...
+│   └── ...
+│
+├── 📂 resultado_analise/                  # OUTPUT: Relatórios gerados
+│   │
+│   ├── 📂 ULTIMO/                         # ⭐ Sempre a análise mais recente
+│   │   ├── 📄 relatorio_executivo.html    # HTML com imagens Base64 (220KB)
+│   │   ├── 📊 relatorio_consolidado.xlsx  # Excel com 4 abas (500KB-2MB)
+│   │   ├── 📈 grafico_colaboradores_por_data.png (300 DPI, 1400x800)
+│   │   ├── 📉 grafico_evolucao_temporal.png (300 DPI, 1400x800)
+│   │   ├── 🥧 grafico_distribuicao_situacao.png (300 DPI, 1000x800)
+│   │   └── 📊 grafico_top_tipos.png (300 DPI, 1200x800)
+│   │
+│   ├── 📂 2026-02-08_15-30-45/            # Execução timestamped (backup)
+│   │   └── ... (mesmos 6 arquivos)
+│   │
+│   ├── 📂 2026-02-07_10-15-20/            # Execução anterior
+│   │   └── ... (mesmos 6 arquivos)
+│   │
+│   └── 📂 2026-02-06_14-45-30/            # Execução mais antiga
+│       └── ... (mesmos 6 arquivos)
+│
+├── 📂 docs/                               # Documentação adicional (opcional)
+│   ├── ARCHITECTURE.md                    # Arquitetura do sistema
+│   ├── API.md                             # Documentação de funções
+│   ├── TROUBLESHOOTING.md                 # Solução de problemas
+│   └── SCREENSHOTS/                       # Capturas de tela
+│       ├── terminal_output.png
+│       ├── html_report.png
+│       ├── excel_report.png
+│       └── email_outlook.png
+│
+├── 📂 examples/                           # Exemplos (opcional)
+│   ├── exemplo_planilha.xlsm              # Planilha de exemplo (FAKE DATA)
+│   └── exemplo_config.py                  # Configuração de exemplo
+│
+├── 📂 tests/                              # Testes (opcional - futuro)
+│   ├── test_leitor.py
+│   ├── test_analisador.py
+│   └── test_email.py
+│
+├── 📂 scripts/                            # Scripts auxiliares (opcional)
+│   ├── limpar_pastas_antigas.py           # Remove análises antigas
+│   ├── agendar_execucao.py                # Agendamento automático
+│   └── validar_planilhas.py               # Valida estrutura antes de rodar
+│
+└── 📂 assets/                             # Recursos visuais (opcional)
+    ├── logo_yduqs.png
+    ├── icon_eco_echo.ico
+    └── banner_readme.png
+
+
+================================================================================
+📊 TAMANHOS APROXIMADOS
+================================================================================
+
+Código Fonte:
+  ECO Echo2.py                    ~50 KB
+  ECO Echo - envio_de_email.py    ~15 KB
+
+Documentação:
+  README.md                       ~30 KB
+  QUICKSTART.md                    ~6 KB
+  CHANGELOG.md                     ~6 KB
+  Outros                           ~5 KB
+
+Dependências:
+  venv/ (ambiente virtual)       ~100 MB
+
+Outputs por Execução:
+  relatorio_executivo.html       ~220 KB
+  relatorio_consolidado.xlsx     ~500 KB - 2 MB
+  4x Gráficos PNG                 ~2-4 MB total
+  ────────────────────────────────────────
+  Total por execução:            ~3-7 MB
+
+Com 10 planilhas de 5000 linhas cada:
+  Tempo de processamento:        ~30 segundos
+  Output total:                   ~5 MB
+
+
+================================================================================
+🔄 FLUXO DE TRABALHO TÍPICO
+================================================================================
+
+1. PREPARAÇÃO
+   └─ Organizar planilhas em planilhas_para_analise/DD.MM.YYYY/
+
+2. EXECUÇÃO
+   └─ python "ECO Echo2.py"
+      ├─ Lê todas as planilhas
+      ├─ Processa dados
+      ├─ Calcula KPIs
+      ├─ Gera gráficos
+      ├─ Cria HTML + Excel
+      └─ Salva em resultado_analise/ULTIMO/
+
+3. VALIDAÇÃO (opcional)
+   └─ Abrir relatorio_executivo.html no navegador
+      └─ Verificar se dados estão corretos
+
+4. ENVIO
+   └─ python "ECO Echo - envio_de_email.py"
+      ├─ Detecta pasta ULTIMO
+      ├─ Valida arquivos
+      ├─ Cria email no Outlook
+      └─ Aguarda usuário clicar ENVIAR
+
+5. BACKUP AUTOMÁTICO
+   └─ Pasta timestamped fica como histórico
+      └─ Opcional: Script para limpar pastas antigas
+
+
+================================================================================
+📝 CONVENÇÕES DE NOMENCLATURA
+================================================================================
+
+Planilhas de entrada:
+  Formato: gestao_requerimentos_<NOME>.xlsm
+  Exemplo: gestao_requerimentos_andrey.xlsm
+           gestao_requerimentos_maria.xlsm
+
+Pastas de data:
+  Formato: DD.MM.YYYY
+  Exemplo: 05.02.2026
+           06.02.2026
+
+Pastas timestamped:
+  Formato: YYYY-MM-DD_HH-MM-SS
+  Exemplo: 2026-02-08_15-30-45
+           2026-02-07_10-15-20
+
+
+================================================================================
+🎯 PONTOS DE ENTRADA
+================================================================================
+
+Análise Completa:
+  python "ECO Echo2.py"
+
+Envio de Email:
+  python "ECO Echo - envio_de_email.py"
+
+
+================================================================================
+📦 DISTRIBUIÇÃO
+================================================================================
+
+Para compartilhar com outra pessoa:
+
+1. ZIP DO PROJETO (sem dados sensíveis):
+   eco-echo/
+   ├── src/
+   ├── docs/
+   ├── requirements.txt
+   ├── README.md
+   ├── .gitignore
+   └── LICENSE
+
+2. INSTRUÇÕES:
+   - Descompactar
+   - pip install -r requirements.txt
+   - Criar planilhas_para_analise/
+   - Configurar emails
+   - Executar
+
+
+================================================================================
+🚀 DEPLOY
+================================================================================
+
+Desenvolvimento Local:
+  ✓ Windows 10/11
+  ✓ Python 3.8+
+  ✓ Microsoft Outlook
+
+Produção (Servidor - futuro):
+  - Scheduler (Task Scheduler do Windows)
+  - Logs centralizados
+  - Notificações automáticas
+
+
+================================================================================
+🔒 SEGURANÇA
+================================================================================
+
+NÃO versionar (no .gitignore):
+  ✗ planilhas_para_analise/     (dados sensíveis)
+  ✗ resultado_analise/           (relatórios com dados)
+  ✗ config_local.py              (credenciais)
+  ✗ venv/                        (ambiente virtual)
+
+Pode versionar (no Git):
+  ✓ src/                         (código)
+  ✓ docs/                        (documentação)
+  ✓ requirements.txt             (dependências)
+  ✓ README.md                    (README)
+
+
+================================================================================
+Última atualização: 08/02/2026
+Mantido por: Jonathan Barbosa - YDUQS CSC
+================================================================================

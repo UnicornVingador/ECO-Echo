@@ -1,0 +1,302 @@
+# ECO Echo - Sistema de Análise de Requerimentos
+# .gitignore para Python + Excel + Dados Sensíveis
+# Autor: Jonathan Barbosa
+
+# ============================================================================
+# DADOS SENSÍVEIS - NUNCA VERSIONAR (LGPD)
+# ============================================================================
+
+# Planilhas com dados reais
+planilhas_para_analise/
+*.xlsm
+*.xlsx
+*.xls
+*.csv
+
+# Relatórios gerados
+resultado_analise/
+*.html
+*.png
+
+# Configurações locais com credenciais
+config_local.py
+.env
+.env.local
+
+# Emails e contatos
+emails.txt
+contatos.txt
+
+# ============================================================================
+# PYTHON
+# ============================================================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Scrapy stuff:
+.scrapy
+
+# Sphinx documentation
+docs/_build/
+
+# PyBuilder
+.pybuilder/
+target/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# IPython
+profile_default/
+ipython_config.py
+
+# pyenv
+.python-version
+
+# pipenv
+Pipfile.lock
+
+# poetry
+poetry.lock
+
+# pdm
+.pdm.toml
+
+# PEP 582
+__pypackages__/
+
+# Celery stuff
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Rope project settings
+.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Pyre type checker
+.pyre/
+
+# pytype static type analyzer
+.pytype/
+
+# Cython debug symbols
+cython_debug/
+
+# ============================================================================
+# IDEs e Editores
+# ============================================================================
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ============================================================================
+# SISTEMA OPERACIONAL
+# ============================================================================
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+.directory
+.Trash-*
+
+# ============================================================================
+# MICROSOFT OFFICE
+# ============================================================================
+
+# Word
+~$*.doc*
+
+# Excel
+~$*.xls*
+*.xlk
+
+# PowerPoint
+~$*.ppt*
+
+# Visio
+~$*.vsd*
+
+# Office temp files
+~*.tmp
+
+# ============================================================================
+# ARQUIVOS TEMPORÁRIOS
+# ============================================================================
+
+# Backups
+*.bak
+*.backup
+*.old
+*_backup/
+*_old/
+
+# Logs
+logs/
+*.log
+
+# Temporary files
+temp/
+tmp/
+*.tmp
+*.temp
+
+# ============================================================================
+# ARQUIVOS DE TESTE (descomente se usar)
+# ============================================================================
+
+# test_data/
+# *.test.xlsx
+# *.test.xlsm
+
+# ============================================================================
+# DOCUMENTAÇÃO GERADA
+# ============================================================================
+
+# Sphinx
+_build/
+_static/
+_templates/
+
+# ============================================================================
+# DADOS DE EXEMPLO (PERMITIR se quiser)
+# ============================================================================
+
+# Se quiser incluir dados de exemplo no Git, descomente abaixo:
+# !exemplo_planilha.xlsx
+# !dados_exemplo/
+
+# ============================================================================
+# NOTAS
+# ============================================================================
+# 
+# ATENÇÃO: Antes de fazer commit, sempre verifique:
+# 1. Nenhuma planilha com dados reais foi incluída
+# 2. Nenhum email ou credencial está no código
+# 3. Caminhos absolutos foram substituídos por relativos
+# 
+# Para verificar o que será commitado:
+# git status
+# git diff
+# 
+# ============================================================================

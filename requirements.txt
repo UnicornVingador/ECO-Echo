@@ -1,0 +1,67 @@
+# ECO Echo - Sistema de Análise de Requerimentos
+# Requirements file para Python 3.8+
+# Autor: Jonathan Barbosa
+# Versão: 3.2
+
+# ============================================================================
+# CORE - Manipulação de Dados
+# ============================================================================
+pandas>=2.0.0
+numpy>=1.24.0
+
+# ============================================================================
+# EXCEL - Leitura e Escrita
+# ============================================================================
+openpyxl>=3.1.0          # Para .xlsx e .xlsm (REQUERIDO)
+xlrd>=2.0.1              # Suporte adicional para .xls antigos
+
+# ============================================================================
+# VISUALIZAÇÃO - Gráficos
+# ============================================================================
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# ============================================================================
+# AUTOMAÇÃO - Integração com Windows/Outlook
+# ============================================================================
+pywin32>=305             # Para integração com Microsoft Outlook (Windows only)
+
+# ============================================================================
+# UTILITÁRIOS
+# ============================================================================
+python-dateutil>=2.8.2   # Manipulação avançada de datas
+
+# ============================================================================
+# NOTAS DE INSTALAÇÃO
+# ============================================================================
+# 
+# INSTALAÇÃO BÁSICA:
+# ------------------
+# pip install -r requirements.txt
+#
+# INSTALAÇÃO COM AMBIENTE VIRTUAL (RECOMENDADO):
+# ----------------------------------------------
+# python -m venv venv
+# venv\Scripts\activate  (Windows)
+# source venv/bin/activate  (Linux/Mac)
+# pip install -r requirements.txt
+#
+# TROUBLESHOOTING:
+# ----------------
+# Se tiver problemas com pywin32 no Windows:
+# pip install --upgrade pywin32
+# python venv\Scripts\pywin32_postinstall.py -install
+#
+# DEPENDÊNCIAS OPCIONAIS (não obrigatórias):
+# ------------------------------------------
+# pillow>=10.0.0          # Para processamento de imagens (se precisar)
+# plotly>=5.14.0          # Para gráficos interativos (futuro)
+# dash>=2.9.0             # Para dashboard web (futuro)
+#
+# VERSÕES TESTADAS:
+# -----------------
+# Python 3.8, 3.9, 3.10, 3.11, 3.12
+# Windows 10/11 (pywin32 requer Windows)
+# Microsoft Outlook 2016, 2019, 2021, Office 365
+#
+# ============================================================================
